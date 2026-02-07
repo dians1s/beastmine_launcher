@@ -1,0 +1,10 @@
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\time_core-24734c704dc0749a.d: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\convert.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\hint.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\util.rs
+
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\libtime_core-24734c704dc0749a.rlib: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\convert.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\hint.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\util.rs
+
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\libtime_core-24734c704dc0749a.rmeta: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\convert.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\hint.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\util.rs
+
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\lib.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\convert.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\hint.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\time-core-0.1.7\src\util.rs:

@@ -1,0 +1,91 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "BeastMine Launcher",
+  "version": "1.0.0",
+  "identifier": "com.beastmine.launcher",
+  "build": {
+    "frontendDist": "../frontend/dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "cd frontend && npm run dev",
+    "beforeBuildCommand": "cd frontend && npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "BeastMine Launcher",
+        "width": 1280,
+        "height": 720,
+        "center": true,
+        "decorations": false,
+        "transparent": true,
+        "shadow": true,
+        "fullscreen": false,
+        "resizable": false,
+        "maximizable": false,
+        "closable": true,
+        "visible": false,
+        "hiddenTitle": true,
+        "windowEffects": {
+          "effects": ["mica"]
+        }
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' https://beastmine.ru https: wss:; img-src 'self' https: data: blob:; style-src 'self' 'unsafe-inline'",
+      "capabilities": [
+        {
+          "identifier": "main-capability",
+          "windows": ["main"],
+          "permissions": [
+            "core:default",
+            "core:window:default",
+            "core:window:allow-minimize",
+            "core:window:allow-close",
+            "shell:allow-open",
+            "fs:default",
+            "fs:allow-app-read-recursive",
+            "fs:allow-app-write-recursive",
+            "fs:allow-download-read-recursive",
+            "fs:allow-download-write-recursive",
+            {
+              "identifier": "http:default",
+              "allow": [{ "url": "https://beastmine.ru" }, { "url": "https://beastmine.ru/api/**" }]
+            },
+            "notification:default",
+            "process:default",
+            "os:default",
+            "updater:default"
+          ]
+        }
+      ]
+    },
+    "withGlobalTauri": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "category": "Game",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "",
+      "nsis": {
+        "installMode": "both"
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEUwNDk2NDA3MTM2OTk4M0EKUldUTWp2c3V6QVhpY1dseVNTZGJOanl1VnZqYmptd2Z6UHZLdk9lcFVyRUROeXM2NXJPQ1FaRVQK",
+      "endpoints": [
+        "https://api.beastmine.ru/launcher/update"
+      ]
+    }
+  }
+}

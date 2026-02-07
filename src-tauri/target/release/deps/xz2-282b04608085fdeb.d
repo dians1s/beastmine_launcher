@@ -1,0 +1,11 @@
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\xz2-282b04608085fdeb.d: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\stream.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\bufread.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\read.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\write.rs
+
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\libxz2-282b04608085fdeb.rlib: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\stream.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\bufread.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\read.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\write.rs
+
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\libxz2-282b04608085fdeb.rmeta: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\stream.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\bufread.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\read.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\write.rs
+
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\lib.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\stream.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\bufread.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\read.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\xz2-0.1.7\src\write.rs:

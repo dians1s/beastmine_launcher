@@ -1,0 +1,10 @@
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\tauri_plugin_os-7d77bcdd8c172535.d: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\commands.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\error.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\./init.js
+
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\libtauri_plugin_os-7d77bcdd8c172535.rlib: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\commands.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\error.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\./init.js
+
+C:\Users\danisPC\Desktop\sites\minebeast\beastmine_golang\beastmine-launcher\src-tauri\target\release\deps\libtauri_plugin_os-7d77bcdd8c172535.rmeta: C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\lib.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\commands.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\error.rs C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\./init.js
+
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\lib.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\commands.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\error.rs:
+C:\Users\danisPC\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tauri-plugin-os-2.3.2\src\./init.js:
