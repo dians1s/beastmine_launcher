@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { User, Mail, Calendar, Shield, Coins, Gem, Copy, Check } from 'lucide-react';
+import { User, Mail, Calendar, Shield, Copy, Check, LogOut } from 'lucide-react';
 import { useLauncherStore } from '../store/useStore';
 import { api } from '../utils/api';
 
 const Profile = () => {
-  const { user, setUser } = useLauncherStore();
+  const { user, setUser, logout } = useLauncherStore();
   const [, setIsLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -44,6 +44,16 @@ const Profile = () => {
       navigator.clipboard.writeText(user.uuid);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await api.logout();
+    } catch (err) {
+      console.error('Logout error:', err);
+    } finally {
+      logout();
     }
   };
 
@@ -148,7 +158,7 @@ const Profile = () => {
 
         {/* Currencies */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {/* Donate Currency */}
+          {/* BeastCoins - платная валюта */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -156,17 +166,17 @@ const Profile = () => {
             className="glass rounded-2xl p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
-                <Gem size={20} className="text-yellow-400" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center p-2">
+                <img src="/beastcoin.svg" alt="BC" className="w-full h-full object-contain" />
               </div>
               <div>
-                <p className="text-white/60 text-xs">Донат-валюта</p>
+                <p className="text-white/60 text-xs">BeastCoins</p>
                 <p className="text-xl font-bold text-white">{user?.donate ?? 0}</p>
               </div>
             </div>
           </motion.div>
 
-          {/* BeastCoins */}
+          {/* BeastStics - бесплатная валюта */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -174,11 +184,11 @@ const Profile = () => {
             className="glass rounded-2xl p-4"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
-                <Coins size={20} className="text-green-400" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center p-2">
+                <img src="/beastics.svg" alt="BS" className="w-full h-full object-contain" />
               </div>
               <div>
-                <p className="text-white/60 text-xs">BeastCoins</p>
+                <p className="text-white/60 text-xs">BeastStics</p>
                 <p className="text-xl font-bold text-white">{user?.coins ?? 0}</p>
               </div>
             </div>
@@ -207,6 +217,18 @@ const Profile = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* Logout Button */}
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          onClick={handleLogout}
+          className="w-full glass rounded-2xl p-4 flex items-center justify-center gap-2 text-error hover:bg-error/10 transition-colors"
+        >
+          <LogOut size={20} />
+          <span className="font-medium">Выйти из аккаунта</span>
+        </motion.button>
       </motion.div>
     </div>
   );

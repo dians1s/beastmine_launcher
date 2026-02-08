@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { 
-  Gamepad2, Settings, User, Package, Gem, Coins
+  Home, Settings, Boxes
 } from 'lucide-react';
 import { useLauncherStore } from '../store/useStore';
 
@@ -13,12 +13,15 @@ const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
   const { sidebarCollapsed, user } = useLauncherStore();
 
   const menuItems = [
-    { id: 'play', icon: Gamepad2, label: 'Играть' },
-    { id: 'profile', icon: User, label: 'Профиль' },
-    { id: 'modpacks', icon: Package, label: 'Модпаки' },
-    { id: 'skins', icon: User, label: 'Скины' },
+    { id: 'home', icon: Home, label: 'Главная' },
+    { id: 'builds', icon: Boxes, label: 'Сборки' },
     { id: 'settings', icon: Settings, label: 'Настройки' },
   ];
+
+  // Ссылка на скин для головы персонажа
+  const skinUrl = user?.username 
+    ? `https://beastmine.ru/skins/${user.username}.png`
+    : null;
 
   return (
     <motion.div
@@ -38,11 +41,15 @@ const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-3 pointer-events-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
-            <Gamepad2 size={20} className="text-white" />
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+            <img 
+              src="/logo.svg" 
+              alt="BeastMine" 
+              className="w-full h-full object-contain"
+            />
           </div>
           {!sidebarCollapsed && (
-            <span className="font-bold text-white whitespace-nowrap">BeastMine</span>
+            <span className="font-bold text-white whitespace-nowrap text-lg">BeastMine</span>
           )}
         </motion.div>
       </div>
@@ -88,57 +95,56 @@ const Sidebar = ({ activeTab, onTabChange }: SidebarProps) => {
         })}
       </nav>
 
-      {/* Currencies Section */}
-      {!sidebarCollapsed && (
-        <div className="px-3 pb-3">
-          <div className="glass rounded-xl p-3 space-y-2">
-            {/* Donate */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center flex-shrink-0">
-                <Gem size={14} className="text-yellow-400" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-xs text-white/40">Донат</p>
-                <p className="text-sm font-medium text-white truncate">
-                  {user?.donate?.toLocaleString() ?? 0}
-                </p>
-              </div>
-            </div>
-            
-            {/* Coins */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0">
-                <Coins size={14} className="text-green-400" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-xs text-white/40">Coins</p>
-                <p className="text-sm font-medium text-white truncate">
-                  {user?.coins?.toLocaleString() ?? 0}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* User - no drag */}
       <div className="p-3 border-t border-white/5 no-drag">
         <motion.div
           whileHover={{ scale: 1.02 }}
+          onClick={() => onTabChange('profile')}
           className={`
             flex items-center gap-3 p-2 rounded-xl bg-white/5 cursor-pointer no-drag
             ${sidebarCollapsed ? 'justify-center' : ''}
           `}
         >
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold text-sm">
-              {user?.username?.charAt(0).toUpperCase() || 'U'}
-            </span>
-          </div>
+          {skinUrl ? (
+            <div 
+              className="w-10 h-10 rounded-xl flex-shrink-0 overflow-hidden"
+              style={{
+                backgroundImage: `url(${skinUrl})`,
+                backgroundSize: '320px',
+                backgroundPosition: '-40px -40px',
+                imageRendering: 'pixelated',
+                backgroundRepeat: 'no-repeat',
+              }}
+            />
+          ) : (
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm">
+                {user?.username?.charAt(0).toUpperCase() || 'U'}
+              </span>
+            </div>
+          )}
           {!sidebarCollapsed && (
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-white truncate">{user?.username}</p>
-              <p className="text-xs text-white/40 truncate">{user?.email}</p>
+              {/* Валюты */}
+              <div className="flex items-center gap-3 mt-1">
+                <div className="flex items-center gap-1">
+                  <img 
+                    src="/beastcoin.svg" 
+                    alt="BC" 
+                    className="w-3.5 h-3.5 object-contain"
+                  />
+                  <span className="text-xs text-white/60">{user?.donate?.toLocaleString() ?? 0}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <img 
+                    src="/beastics.svg" 
+                    alt="BS" 
+                    className="w-3.5 h-3.5 object-contain"
+                  />
+                  <span className="text-xs text-white/60">{user?.coins?.toLocaleString() ?? 0}</span>
+                </div>
+              </div>
             </div>
           )}
         </motion.div>

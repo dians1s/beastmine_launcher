@@ -9,7 +9,6 @@ import { api } from './utils/api';
 import Login from './pages/Login';
 import Launcher from './pages/Launcher';
 import Loading from './components/Loading';
-import TitleBar from './components/TitleBar';
 
 // Background effect
 const Background = () => (
@@ -80,11 +79,10 @@ function App() {
   }
 
   return (
-    <div className="h-screen w-screen overflow-hidden flex flex-col">
+    <div className="h-screen w-screen overflow-hidden flex flex-col" data-tauri-drag-region>
       <Background />
-      <TitleBar />
       
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 overflow-hidden" data-tauri-drag-region>
         <BrowserRouter>
           <AnimatePresence mode="wait">
             <Routes>

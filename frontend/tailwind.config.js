@@ -8,19 +8,19 @@ export default {
     extend: {
       colors: {
         background: {
-          DEFAULT: '#0a0a0f',
-          card: '#12121a',
-          hover: '#1a1a25',
+          DEFAULT: '#0f0a0a',
+          card: '#1a1212',
+          hover: '#251a1a',
         },
         primary: {
-          DEFAULT: '#6366f1',
-          hover: '#4f46e5',
-          light: '#818cf8',
+          DEFAULT: '#e41d21',
+          hover: '#c4181c',
+          light: '#f04a4d',
         },
         accent: {
-          DEFAULT: '#8b5cf6',
-          hover: '#7c3aed',
-          glow: 'rgba(139, 92, 246, 0.5)',
+          DEFAULT: '#ff4444',
+          hover: '#e63946',
+          glow: 'rgba(228, 29, 33, 0.5)',
         },
         success: '#22c55e',
         warning: '#f59e0b',
